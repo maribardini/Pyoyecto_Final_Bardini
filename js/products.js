@@ -8,7 +8,7 @@ const productos = [
     },
     {
         id: 2,
-        producto: "Malbec Escorihuela Gascon",
+        producto: "Malbec Escorihuela   ",
         cantidad: 1,
         precio: 18499,
         imgUrl: "./img/escorihuela_gason.jpg",
@@ -43,7 +43,7 @@ const productos = [
     },
     {
         id: 7, 
-        producto: "Chardonnay Osadia De Crar",
+        producto: "Chardonnay Osadia",
         cantidad: 1,
         precio: 11399,
         imgUrl: "./img/osadia_de_crear.jpg",
