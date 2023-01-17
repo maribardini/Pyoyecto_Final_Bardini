@@ -1,6 +1,4 @@
-
 const pintarCarrito = () => {
-
     modalContainer.innerHTML = ""
     modalContainer.style.display = "flex";
     const modalHeader = document.createElement("div");
@@ -76,7 +74,7 @@ const pintarCarrito = () => {
     compraFinal.addEventListener("click", () => {
 
         Swal.fire({
-            text: 'Gracias por su comora!',
+            text: 'Gracias por su compra!',
             icon: 'success',
             confirmButtonText: 'Cerrar'
         })
@@ -95,19 +93,18 @@ const eliminarProducto = (id) => {
     carritoCounter();
     saveLocal();
     pintarCarrito();
-
 }
 
 const carritoCounter = () => {
-
     cantidadCarrito.style.display = "block";
 
-    const carritoLength = carrito.length;
+    //  para que te renderice las cantidades en el carro del nav
+    const carritoLength = carrito.reduce((a, b) => a + b.cantidad, 0)
+
 
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
 
     cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
-
 }
 
 carritoCounter();
