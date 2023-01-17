@@ -98,12 +98,14 @@ const eliminarProducto = (id) => {
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block";
 
-    const carritoLength = carrito.reduce((a, b) => a + b.cantidad, 0)
 
+
+    const carritoLength = carrito.reduce((a, b) => a + b.cantidad, 0)
 
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
 
     cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+
 }
 
 carritoCounter();
