@@ -5,7 +5,6 @@ const cantidadCarrito = document.getElementById("cantidadCarrito")
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
 fetch("./productos.json")
     .then(response => response.json())
     .then(productos => miPrograma(productos))
@@ -63,8 +62,8 @@ function miPrograma(productos) {
         });
     });
 }
-    // set item
-    const saveLocal = () => {
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-    }
+// set item
+const saveLocal = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
 
